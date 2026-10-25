@@ -1,0 +1,30 @@
+# ── Agent/tool state (regenerable, not part of the project) ──
+.mimosa/
+tools/.mimosa/
+
+# ── Video production intermediates (final cut stays: video/ClimateProof-demo.mp4) ──
+video/scene*.webm
+video/scene*.mkv
+video/*.mkv
+video/seg*.mp3
+video/check*.png
+
+# ── OS / editor noise ──
+Thumbs.db
+.DS_Store
+desktop.ini
+*.swp
+
+# ── Runtime / build junk (none by design, kept for safety) ──
+node_modules/
+__pycache__/
+*.pyc
+*.log
+
+# ── Secrets (never commit) ──
+.env
+.env.*
+*.pem
+*.key
+# internal submission draft - keep local only
+SUBMISSION.md

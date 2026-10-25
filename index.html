@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClimateProof — tamper-evident climate data with on-device AI</title>
+  <meta name="description" content="An open transparency log for environmental readings: ECDSA-signed stations, SHA-256 hash-chained blocks, Merkle inclusion proofs, and a forecasting AI trained live in your browser on NOAA data. IEEE ClimateChain Hackathon.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" data-go="dashboard"><span class="logo">🌿</span><span>Climate<b>Proof</b></span></a>
+    <nav class="nav">
+      <a data-go="dashboard" data-page="dashboard">Dashboard</a>
+      <a data-go="ledger" data-page="ledger">Ledger</a>
+      <a data-go="tamper" data-page="tamper">Tamper Lab</a>
+      <a data-go="lab" data-page="lab">AI Lab</a>
+    </nav>
+    <span class="pill">IEEE ClimateChain 2026 · Track 4</span>
+  </header>
+
+  <main>
+    <div class="page" id="page-dashboard"></div>
+    <div class="page" id="page-ledger"></div>
+    <div class="page" id="page-tamper"></div>
+    <div class="page" id="page-lab"></div>
+  </main>
+
+  <footer>
+    <div class="footwrap">
+      <p><b>ClimateProof</b> — a Track 4 prototype for the <a href="https://ieee-climatechain-hack.devpost.com/" target="_blank" rel="noopener">IEEE ClimateChain Global Hackathon 2026</a>. All cryptography (ECDSA P-256, SHA-256, Merkle proofs) is executed by your browser's Web Crypto engine; the forecasting model trains locally on your device. Data: <a href="https://gml.noaa.gov/ccgg/trends/" target="_blank" rel="noopener">NOAA GML Mauna Loa CO₂</a> (public domain).</p>
+      <p class="muted">Educational prototype — single-node log without distributed consensus. The signatures, hashes and proofs are real; production deployment would mirror Certificate Transparency with multiple independent log servers and witness cosigning.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/ml.js"></script>
+  <script src="js/chain.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
